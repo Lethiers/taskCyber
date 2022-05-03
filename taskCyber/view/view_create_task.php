@@ -15,8 +15,6 @@
         <textarea name="content_task" cols="30" rows="10"></textarea>
         <p>date :</p>
         <input type="date" name="date_task">
-        <p>realise ?</p>
-        <input type="checkbox" name="validate_task">
         <br>
         <input type="submit" value="créer">
     </form>

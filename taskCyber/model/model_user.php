@@ -114,6 +114,33 @@ class Utilisateur{
             die('Erreur :'.$e->getMessage());
         }
     }
+
+    // fonction pour modifier un utilisateur
+    function modifyUser($bdd,$id):void{
+        try {
+            $req = $bdd->prepare('UPDATE user SET name_user=:name_user,first_name_user=:first_name_user,login_user=:login_user WHERE id_user=:id_user');
+            $req->execute(array(
+                'name_user' => $this->name_user,
+                'first_name_user' => $this->first_name_user,
+                'login_user' =>$this->login_user
+            ));
+        } catch (Exception $e) {
+            die('Erreur :' .$e->getMessage());
+        }
+    }
+
+    // fonction pour supprimer son compte
+    function deleteUser($bdd,$id):void{
+        try {
+            $req=$bdd->prepare('DELETE FROM user WHERE id_user=:id_user');
+            $req->execute(array(
+                'id_user' => $id
+            ));
+            
+        }catch (Exception $e) {
+            die('Erreur :' .$e->getMessage());
+        }
+    }
 }
 
 ?>

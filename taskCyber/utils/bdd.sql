@@ -19,7 +19,6 @@ CREATE TABLE task (
   name_task varchar(50),
   content_task text,
   date_task date,
-  validate_task tinyint(1),
   id_user int,
   id_cat int
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
