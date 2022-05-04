@@ -1,8 +1,8 @@
 
     <header>
         <ul>
-            <li><a href="./ctrl_sign_in.php">sign in</a></li>
-            <li><a href="./ctrl_connect.php">log in</a></li>
+            <li><a href="./sigIn">sign in</a></li>
+            <li><a href="./acceuil">log in</a></li>
         </ul>
 
     </header>

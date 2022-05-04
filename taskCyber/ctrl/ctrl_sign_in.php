@@ -1,15 +1,13 @@
 <?php
-
+session_start();
 // conneixon à la BDD
-include '../utils/connectBdd.php';
+include './utils/connectBdd.php';
 // ajout des fonctions
-include '../model/model_user.php';
-// ajout header
-include '../view/view_header.php';
+include './model/model_user.php';
 // ajout page html
-include '../view/view_sign_in.php';
+include './view/view_sign_in.php';
 // import fonction hashage
-include '../utils/function.php';
+include './utils/function.php';
 
 // on vérifie si les champ sont remplis
 $message = "";

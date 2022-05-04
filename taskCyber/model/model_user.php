@@ -120,9 +120,10 @@ class Utilisateur{
         try {
             $req = $bdd->prepare('UPDATE user SET name_user=:name_user,first_name_user=:first_name_user,login_user=:login_user WHERE id_user=:id_user');
             $req->execute(array(
-                'name_user' => $this->name_user,
-                'first_name_user' => $this->first_name_user,
-                'login_user' =>$this->login_user
+                'name_user' => $this->getName(),
+                'first_name_user' => $this->getFirstName(),
+                'login_user' =>$this->getLogin(),
+                'id_user' =>$id
             ));
         } catch (Exception $e) {
             die('Erreur :' .$e->getMessage());
